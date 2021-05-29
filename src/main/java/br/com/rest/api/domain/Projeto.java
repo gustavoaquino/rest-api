@@ -1,5 +1,7 @@
 package br.com.rest.api.domain;
 
+import br.com.rest.api.input.ProjetoInput;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,15 @@ public class Projeto{
 
     @Column(name = "TITLE")
     private String title;
+
+    public Projeto() {
+    }
+
+    public Projeto(ProjetoInput projetoInput) {
+        this.id = projetoInput.getId();
+        this.owner = projetoInput.getOwner();
+        this.title = projetoInput.getTitle();
+    }
 
     public Long getId() {
         return id;
