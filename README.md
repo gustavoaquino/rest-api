@@ -6,9 +6,10 @@
   
 ### What's in this project?
 
-<b>
 
-- Rest api containg all http verbs
+
+- REST API containg all http verbs
+- JPA
 - MVC Architeture 
 - Lombok
 - Swagger
@@ -16,5 +17,5 @@
 - H2 as database
 - Java 17
 
-</b>
+
 
