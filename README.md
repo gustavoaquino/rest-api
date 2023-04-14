@@ -10,9 +10,9 @@
 - MVC Architeture 
 - Lombok
 - Swagger
-- Spring Boot 3
+- Spring Boot 3 (updated in 2023)
 - H2 as database
 - Java 17
 
-
 </b>
+
