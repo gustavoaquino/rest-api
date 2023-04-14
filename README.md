@@ -1,5 +1,7 @@
 ### REST-API | CREATED IN 2021
 
+<hr />
+
   - <b> Project created to study some rest concepts </b> 
   
 ### What's in this project?
