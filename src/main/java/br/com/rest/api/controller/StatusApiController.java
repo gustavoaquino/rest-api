@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class ApiController {
+public class StatusApiController {
 
     @GetMapping
-    public String exibir(){
+    public String getStatus(){
         return "API ON";
     }
 

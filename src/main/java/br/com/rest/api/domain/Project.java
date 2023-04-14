@@ -1,12 +1,11 @@
 package br.com.rest.api.domain;
 
-import br.com.rest.api.input.ProjetoInput;
-
-import javax.persistence.*;
+import br.com.rest.api.request.ProjectRequest;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "PROJETO")
-public class Projeto{
+@Table(name = "PROJECT")
+public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -18,13 +17,18 @@ public class Projeto{
     @Column(name = "TITLE")
     private String title;
 
-    public Projeto() {
+    public Project() {
     }
 
-    public Projeto(ProjetoInput projetoInput) {
-        this.id = projetoInput.getId();
-        this.owner = projetoInput.getOwner();
-        this.title = projetoInput.getTitle();
+    public Project(String owner, String title) {
+        this.owner = owner;
+        this.title = title;
+    }
+
+    public Project(ProjectRequest projectRequest) {
+        this.id = projectRequest.getId();
+        this.owner = projectRequest.getOwner();
+        this.title = projectRequest.getTitle();
     }
 
     public Long getId() {
@@ -50,4 +54,10 @@ public class Projeto{
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public void parseNewProjectInput(ProjectRequest projectNew){
+        this.owner = projectNew.getOwner();
+        this.title = projectNew.getTitle();
+    }
+
 }
